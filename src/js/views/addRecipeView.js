@@ -25,8 +25,7 @@ class addRecipeView extends View {
   }
   _addHandlerUpload(handler) {
     this._parentElement.addEventListener('submit', function (e) {
-      e.preventDefault();
-      console.log(this); // this uvik pripada funkciji pa je on ovdje parent element, jedino priko binda ga mozemo minjat
+      e.preventDefault(); // this uvik pripada funkciji pa je on ovdje parent element, jedino priko binda ga mozemo minjat
       const dataArr = [...new FormData(this)]; //So, dataArr will be an array containing key-value pairs extracted from the form, where each pair is represented as an array element in the format [key, value].
       const data = Object.fromEntries(dataArr); // pretvaramo array u object
       handler(data);
