@@ -111,6 +111,10 @@ const controlAddRecipe = async function (newRecipe) {
     console.error(err); // ode nan vraca error iz funkcije upload recipe jer je ona async
     addRecipeView.renderError(err.message);
   }
+
+  const newFeature = function () {
+    console.log('wELCOME TO HTE APP');
+  };
 };
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
@@ -120,6 +124,7 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults); // znaci cin stranica registrira nekakvi submit, pokrenit ce se ovo sve
   paginationView.addHandlerClick(controlPagination); // ode je pozvana funkcija kod koje smo dobivali data broj
   addRecipeView._addHandlerUpload(controlAddRecipe);
+  newFeature();
 };
 init();
 
